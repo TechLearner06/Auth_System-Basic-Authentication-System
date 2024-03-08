@@ -1,0 +1,39 @@
+{%load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Authentication System</title>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="home-section-header">
+        <h1>Home Page</h1>
+        <ul>
+        {% if user.is_authenticated %}
+        <li><a href='logout' class="btn">Logout</a></li>
+        {%else%}
+        
+        <li><a href='login' class="btn">Login</a></li>
+        <li><a href='register' class="btn">Register</a></li>
+        {% endif %}
+    </div>
+
+    <div class="home-section">
+        
+        {% if user.is_authenticated %}
+        <h1 class="gradient-text">Welcome to Home page</h1>
+        <h1 class="gradient-text">Hiii {{user.username}}</h1>
+
+        {%else%}
+        <h1 class="gradient-text">Welcome to Home page</h1>
+        <p>A simple Django project that provides user authentication functionalities such as registration, login, and logout. It allows users to securely register an account, login with their credentials, and logout when they are done. The project includes basic validation to ensure the integrity of user data and provides informative messages for better user experience</p>
+
+        {%endif%}
+
+    </div>
+</body>
+</html>
+

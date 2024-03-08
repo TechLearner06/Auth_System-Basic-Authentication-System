@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Authentication System</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="wrapper">
+        <section class="form-signup">
+            <header>Register</header>
+            <form method="post">
+                {% csrf_token %}
+                <div class="user-details">
+                    <div class="fields">            
+                        <label>User Name</label>
+                        <input type="text" name="user_name" placeholder="User Name">
+                    </div>
+                    <div class="fields">
+                        <label>E Mail</label>
+                        <input type="text" name="email" placeholder="Enter your email">
+                    </div>
+                    <div class="fields">
+                        <label>Password</label>
+                        <input type="password" name="password" placeholder="Set password">
+                    </div>
+                    <div class="fields">
+                        <label>Confirm Password</label>
+                        <input type="password" name="password2" placeholder="Confirm password">
+                    </div>
+                    <div class="fields button">
+                        <input type="submit" value="Sign Up">
+                    </div>
+            </form>
+
+            <div class="error">
+                {% for message in messages %}
+                <h4>{{message}}</h4>
+                {%endfor%}
+            </div>
+            <div class="link">Already Sign Up?<a href="login">Sign In</a></div>
+            
+        </section>
+    </div>
+
+
+</body>
+</html>

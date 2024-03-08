@@ -1,0 +1,396 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family: 'Poppins',sans-serif;
+}
+
+body{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #ccc;
+}
+
+
+.wrapper{
+    background-color: white;
+    width:300px;
+    border-radius: 15px;
+    box-shadow:0 0 128px 0 rgba(0,0,0,0.1)
+               0 0 64px -48px rgba(0,0,0,0.5)
+}
+
+.form-signup{
+    padding:15px 20px;
+   
+}
+
+.form-signup header{
+    font-size: 20px;
+    color:blue;
+    font-weight: 600;
+    padding-bottom: 5px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-bottom: 1px solid #0000ff52;
+}
+
+.form-signup header span{
+    color:green
+}
+
+.form-signup form{
+    margin:10px 0;
+}
+
+.form-signup form .error-text{
+    color:darkred;
+    background-color: rgba(91, 91, 175, 0.284);
+    padding:7px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 13px;
+    display: none;
+}
+
+/*
+  :first-child: This pseudo-class selects the first child element of its parent. In your CSS code, .fields:first-child selects the first element with the class .fields that is a child of its parent element.
+
+  :last-child: This pseudo-class selects the last child element of its parent. In your CSS code, .fields:last-child selects the last element with the class .fields that is a child of its parent element.
+*/
+
+
+
+
+.form-signup form .user-details{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-signup form .user-details .fields:first-child{
+    margin-right: 10px;
+}
+
+
+
+.form-signup form .fields{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.form-signup form .fields label{
+    font-size: 12px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin:2px
+}
+
+.form-signup form .fields input{
+    height: 30px;
+    width: 100%;
+    font-size: 14px;
+    padding:0 10px;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    border: none;
+   
+}
+
+.form-signup form .image input{
+    background-color: white;
+}
+
+.form-signup form .button input{
+    background-color: #06073b;
+    color: white;
+    cursor: pointer;
+
+}
+
+
+.form-signup .link{
+    margin:10px 0;
+    font-size: 13px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+.form-signup .link a{
+    cursor: pointer;
+    font-size: 13px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.form-signup .link a:hover{
+    text-decoration: underline;
+}
+
+
+/* users list section */
+
+.users{
+    padding:15px 15px;
+}
+
+
+
+
+.users header,
+.users-list a{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    border-bottom: 1px solid lightgrey;
+}
+
+:is(.users,.users-list) .content
+{
+    display: flex;
+}
+
+.users img{
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+    border:1px solid black;
+    
+}
+
+.users header .details,
+.users-list .details{
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.users header .details span,
+.chat-section header .details span{
+    font-size: 15px;
+    font-weight: bold;
+    
+}
+ 
+.users header .details p,
+.chat-section header .details p{
+    font-size: 10px;
+    color: green;
+}
+
+
+.users header .logout{
+    color:black;
+    font-size: 12px;
+    padding:5px 10px;
+    border-radius: 5px; 
+    background-color:rgb(223, 234, 237) ;
+    font-weight: bold;
+}
+
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.search input{
+    width:100%;
+    height:30px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color:rgb(223, 234, 237);
+    border: none;
+    outline: none;
+}
+
+.search button{
+    width:40px;
+    height: 30px;
+    margin-left: 5px;
+    background-color:rgb(223, 234, 237);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.users-list{
+    max-height:350px ;
+    overflow-y:auto;
+}
+
+.users-list::-webkit-scrollbar{
+    width:0px;
+}
+
+
+.users-list a{
+    margin-bottom: 15px;
+    page-break-after: 10px;
+    padding-right: 15px;
+    border-bottom-color: #f1f1f1 ;
+}
+
+
+
+.users-list a .content img{
+    height: 30px;
+    width: 30px;
+}
+
+.users-list .details span{
+    font-size: 13px;
+    color: black;
+    font-weight: bold;
+}
+
+.users-list .details p{
+    font-size: 13px;
+    color: black;
+}
+
+.users-list a .status-dot{
+    color: green;
+    font-size: 8px;
+}
+
+/* we will use this class name to show offline status*/
+
+.users-list a .status-dot.offline{
+    color:#ccc;
+}
+
+
+/* chat page styling */
+
+
+.chat-section header{
+    display:flex;
+    align-items: center;
+    padding:10px 5px;
+    
+}
+
+.chat-section header .go-back{
+    font-size: 15px;
+    color:black;
+}
+
+
+
+.chat-section header img{
+    width:30px;
+    height:30px;
+    margin:0 10px;
+    border-radius: 50%;
+    border:1px solid black;
+}
+
+
+.chat-box{
+    min-height: 350px;
+    background-color:whitesmoke;
+    padding:20px 13px 20px 13px;
+    max-height:350px ;
+    overflow-y:auto;
+}   
+
+.chat-box::-webkit-scrollbar{
+    width:0px;
+}
+
+
+
+
+.chat-box .outgoing{
+    display: flex;
+}
+
+
+.outgoing .details{
+    margin-left: auto;
+    max-width: calc(100% - 130px);
+    padding: 10px;
+}
+
+.outgoing .details p{
+    background-color: #007bff;
+    border-radius: 18px 18px 0 18px;
+    font-size: 12px;
+    padding:10px 10px;
+    color: #f1f1f1;
+}
+
+.chat-box .incoming{
+    display: flex;
+    align-items: center;
+    
+}
+
+
+.chat-box .incoming img{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.incoming .details p{
+    font-size: 12px;
+    padding:10px 10px;
+    background-color: rgb(223, 234, 237);
+    border-radius: 18px 18px 0px 18px;
+}
+
+/* typing area */
+
+.typing-area {
+    display: flex;
+    position: relative;
+    align-items: center;
+    margin:8px;
+}
+
+.typing-area input {
+    width: 100%; /* Adjusted to accommodate button width */
+    height: 35px;
+    border-radius: 500px;
+    border: none;
+    padding: 10px;
+    background-color: rgb(223, 234, 237);
+}
+
+.typing-area button{
+    position: absolute;
+    right: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: #007bff;
+    transform: translateX(-10px);
+    
+}
+
+.error{
+    color:red;
+    font-size: 10px;
+}
+
+/* home section */
+
+.home-section-header{
+    width:100%;
+    height:10px;
+    background-color: black;
+}
